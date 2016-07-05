@@ -19,6 +19,7 @@ public class MyAdapter extends BaseAdapter {
 
     private Context mContext;
     private List<Track> mTracks;
+    private String dummyImage = "https://s-media-cache-ak0.pinimg.com/236x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89.jpg";
 
     public MyAdapter(Context context, List<Track> tracks) {
         mContext = context;
@@ -60,7 +61,9 @@ public class MyAdapter extends BaseAdapter {
         if (track.getArtworkURL() != null)
             Picasso.with(mContext).load(track.getArtworkURL()).into(holder.trackImageView);
         else
-            Picasso.with(mContext).load(R.drawable.image).into(holder.trackImageView);
+            // Picasso.with(mContext).load(R.drawable.image).into(holder.trackImageView);
+            Picasso.with(mContext).load(dummyImage).into(holder.trackImageView);
+
         return convertView;
 
     }
