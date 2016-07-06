@@ -90,14 +90,14 @@ public class MainActivity extends AppCompatActivity {
         scService.getRecentTracks(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()), new Callback<List<Track>>() {
                     @Override
                     public void success(List<Track> tracks, Response response) {
-                        if (!tracks.isEmpty()) {
-                            Utils.dismissdialog(MainActivity.this);
-                            Log.d(TAG, "First track title :" + tracks.get(0).getTitle());
-                            loadTracks(tracks);
-                        }
+                        Log.d(TAG, "Track size :" +tracks.size());
+                        if(!tracks.isEmpty()){
+                           Utils.dismissdialog(MainActivity.this);
+                        Log.d(TAG, "First track title :" + tracks.get(0).getTitle());
+                        loadTracks(tracks);}
                         //
-                        // else{
-                        // Utils.dismissdialog(MainActivity.this);}
+                       // else{
+                       // Utils.dismissdialog(MainActivity.this);}
 
                     }
 

@@ -5,6 +5,6 @@ package com.senapathi.feocloud;
  */
 public class Config {
 
-    public static final String CLIENT_ID = "3d13ade428589709e70e65766911ed1f";
+    public static final String CLIENT_ID = "f7ba2f2f51679bd5de58983cfecb5ce7";
     public static final String API_URL = "https://api.soundcloud.com";
 }
